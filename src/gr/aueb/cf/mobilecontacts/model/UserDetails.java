@@ -17,6 +17,7 @@ public class UserDetails extends AbstractEntity implements IdentifiableEntity {
     }
 
     public UserDetails(UserDetails userDetails) {
+        setId(userDetails.getId());
         this.firstname = userDetails.getFirstname();
         this.lastname = userDetails.getLastname();
     }
@@ -40,6 +41,7 @@ public class UserDetails extends AbstractEntity implements IdentifiableEntity {
     @Override
     public String toString() {
         return "UserDetails{" +
+                "id=" + getId() +
                 "firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 '}';
